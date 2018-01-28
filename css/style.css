@@ -1,0 +1,131 @@
+.navbar {
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  white-space: nowrap;
+  color: #2c71b6;
+  font-size: 1.2rem;
+}
+
+.page-header {
+  background-image: url(../img/patt.png);
+}
+
+.page-header__navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.page-header__carousel {
+  border-bottom: 1px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.page-header__navbar-search {
+  height: 50px;
+  border: 1px solid #2c71b6;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.page-header__navbar-search input {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.page-header__navbar-search button {
+  padding: 5px;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+}
+
+.page-header__navbar-search i {
+  display: block;
+  padding: 10px;
+  background-color: #2c71b6;
+}
+
+.page-header__cart-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+  color: #2c71b6;
+  border: none;
+  border-radius: 0;
+  background-color: #ffffff;
+}
+
+.page-header__cart-btn span {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  border-radius: 12px;
+  background-color: #2c71b6;
+}
+
+.fa-shopping-cart {
+  font-size: 1.5rem;
+}
+
+main.container-fluid {
+  min-height: 300px;
+  background-color: #dddddd;
+}
+
+footer.container-fluid {
+  min-height: 1300px;
+  background-color: #cccccc;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    width: calc(100% - 300px);
+    padding-right: 30px;
+    padding-left: 70px;
+  }
+
+  .navbar-nav > .nav-item {
+    text-align: center;
+    border-left: 1px solid #2c71b6;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+
+  .navbar-nav > .nav-item:last-child {
+    border-right: 1px solid #2c71b6;
+  }
+
+  .page-header__navbar-search input {
+    width: 10rem !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-header__navbar-search {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: calc(100% - 100px);
+  }
+
+  .page-header__navbar-search input {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+
+  .page-header__cart-btn {
+    margin-top: -12px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

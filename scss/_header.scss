@@ -1,0 +1,90 @@
+.page-header {
+  background-image: url(../img/patt.png);
+
+  &__navbar {
+    background-color: rgba($font-color-light, 0.8);
+  }
+
+  &__carousel {
+    border-bottom: 1px solid $font-color-light;
+    background-color: rgba(#000000, 0.3);
+  }
+
+  &__navbar-search {
+    height: 50px;
+
+    border: 1px solid $font-color-dark;
+
+    flex-wrap: nowrap;
+
+    @media (max-width: 991px) {
+      display: inline-flex;
+
+      width: calc(100% - 100px);
+    }
+
+    input {
+      border: none;
+      background-color: transparent;
+
+      font-size: 1.2rem;
+
+      @media (min-width: 992px) {
+        width: 10rem !important;
+      }
+      @media (max-width: 991px) {
+        flex-grow: 2;
+      }
+    }
+
+    button {
+      padding: 5px;
+
+      color: $font-color-light;
+      border: none;
+      border-radius: 0;
+    }
+
+    i {
+      display: block;
+
+      padding: 10px;
+
+      background-color: $font-color-dark;
+    }
+  }
+}
+
+.page-header__cart-btn {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+
+  color: $font-color-dark;
+  border: none;
+  border-radius: 0;
+  background-color: $font-color-light;
+
+  @media (max-width: 991px) {
+    margin-top: -12px !important;
+  }
+
+  span {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+
+    width: 24px;
+    height: 24px;
+
+    color: $font-color-light;
+    border-radius: 12px;
+    background-color: $font-color-dark;
+  }
+}
+
+.fa-shopping-cart {
+  font-size: 1.5rem;
+}
