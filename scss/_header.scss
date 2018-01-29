@@ -1,11 +1,37 @@
 .page-header {
-  background-image: url(../img/patt.png);
-
   &__navbar {
     background-color: rgba($font-color-light, 0.8);
+
+    .dropdown.show {
+      border-bottom: 1px solid $font-color-light;
+      background-color: $font-color-dark;
+
+      .dropdown-toggle {
+        color: $font-color-light;
+      }
+    }
+
+    .dropdown-menu {
+      margin-top: 1px;
+
+      border: none;
+      border-radius: 0;
+      background-color: $font-color-dark;
+
+      a {
+        color: $font-color-light;
+
+        &:hover {
+          color: $font-color-dark;
+        }
+      }
+    }
   }
 
   &__carousel {
+    margin-right: 0;
+    margin-left: 0;
+
     border-bottom: 1px solid $font-color-light;
     background-color: rgba(#000000, 0.3);
   }
@@ -23,9 +49,11 @@
       width: calc(100% - 100px);
     }
 
-    input {
+    .form-control {
       border: none;
+      border-radius: 0;
       background-color: transparent;
+      box-shadow: none;
 
       font-size: 1.2rem;
 
@@ -38,19 +66,23 @@
     }
 
     button {
-      padding: 5px;
+      margin: 5px;
+      padding: 0;
 
       color: $font-color-light;
-      border: none;
-      border-radius: 0;
+      border-color: $font-color-dark;
+      background-color: $font-color-dark;
+
+      &:hover {
+        color: $font-color-dark;
+        background-color: $font-color-light;
+      }
     }
 
     i {
       display: block;
 
       padding: 10px;
-
-      background-color: $font-color-dark;
     }
   }
 }
@@ -71,6 +103,13 @@
     margin-top: -12px !important;
   }
 
+  &:hover {
+    span {
+      color: $font-color-dark;
+      background-color: $font-color-light;
+    }
+  }
+
   span {
     position: absolute;
     top: -12px;
@@ -78,6 +117,8 @@
 
     width: 24px;
     height: 24px;
+
+    transition: background-color 0.5s;
 
     color: $font-color-light;
     border-radius: 12px;

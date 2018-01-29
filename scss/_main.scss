@@ -1,0 +1,186 @@
+
+.breadcrumb {
+  padding: 1rem 0 0 0;
+
+  opacity: 0.5;
+  background-color: transparent;
+
+  font-size: 14px;
+
+  a {
+    color: $font-color-light;
+  }
+
+  &-item {
+    + .breadcrumb-item::before {
+      content: ">";
+
+      color: $font-color-light;
+    }
+
+    &.active {
+      color: $font-color-light;
+    }
+  }
+}
+
+.page-title {
+  &__header {
+    color: $font-color-light;
+
+    font-size: 2.85rem;
+  }
+
+  &__filter {
+    width: 100%;
+    margin-top: 6px;
+    padding: 3px 10px 5px;
+
+    color: $font-color-light;
+    border-color: $font-color-light;
+    background-color: $font-color-dark;
+
+    font-size: 1.25rem;
+  }
+}
+
+.page-content {
+  margin-top: 30px;
+}
+
+.item {
+  &-wrapper {
+    position: relative;
+
+    margin-bottom: 30px;
+
+    border: 1px solid $font-color-light;
+
+    .container-fluid {
+      background-color: rgba($font-color-dark, 0.5);
+    }
+  }
+
+  &-image {
+    display: flex;
+    overflow: hidden;
+
+    height: 180px;
+
+    background-color: rgba($font-color-light, 0.75);
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-title {
+    padding-top: 0.75rem;
+
+    color: $font-color-light;
+
+    font-size: 1.75rem;
+  }
+
+  &-description {
+    color: $font-color-light;
+
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  &-characteristics {
+    margin-top: 15px;
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+    span {
+      display: block;
+
+      margin-top: 7px;
+      margin-bottom: 7px;
+
+      color: $font-color-light;
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    button {
+      display: block;
+
+      width: 30px;
+      height: 30px;
+      padding: 0;
+
+      &:last-child {
+        margin-top: 5px !important;
+      }
+    }
+  }
+
+  &-price {
+    text-align: center;
+
+    color: $font-color-light;
+
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &-actions {
+    padding: 15px;
+
+    button {
+      display: block;
+
+      width: 100%;
+      margin-bottom: 30px !important;
+      padding: 8px 5px 10px;
+
+      text-transform: uppercase;
+
+      color: $font-color-light;
+      border-color: $font-color-light;
+      border-radius: 0;
+
+      font-size: 1.15rem;
+      font-weight: bold;
+
+      &:last-child {
+        margin-bottom: 15px !important;
+      }
+
+      &:hover {
+        color: $font-color-dark;
+        border-color: $font-color-light;
+        background-color: rgba($font-color-light, 0.75);
+      }
+
+      i {
+        margin-left: 5px;
+
+        font-size: 1rem;
+      }
+    }
+
+    &__cart {
+      background-color: rgba($font-color-light, 0.2);
+    }
+  }
+}
+
+.page-pagination {
+  &__more {
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: $font-color-light;
+
+    font-size: 2rem;
+  }
+}

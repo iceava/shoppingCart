@@ -4,17 +4,5 @@
 @import "_header";
 @import "_footer";
 @import "_common";
+@import "_main";
 @import "_aside";
-
-
-main.container-fluid {
-  min-height: 300px;
-
-  background-color: #dddddd;
-}
-
-footer.container-fluid {
-  min-height: 1300px;
-
-  background-color: #cccccc;
-}

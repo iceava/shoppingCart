@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Title</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -104,23 +105,381 @@
 
   </header>
 
-  <main class="container-fluid">
-
+  <div class="container wrapper">
     <div class="row">
 
-      <div class="col-sm">
-        One of three columns
-      </div>
-      <div class="col-sm">
-        One of three columns
-      </div>
-      <div class="col-sm">
-        One of three columns
-      </div>
+      <main class="col-md-9 order-lg-2">
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+          </ol>
+        </nav>
+
+        <div class="row page-title">
+          <div class="col-md-8">
+            <h1 class="page-title__header">Laptops and Tablets</h1>
+          </div>
+          <div class="col-md-4">
+            <select name="filter" id="page-title__filter" class="page-title__filter">
+              <option value="sv1">sort by price</option>
+              <option value="sv1">sort by name</option>
+              <option value="sv2">sort by date</option>
+              <option value="sv3">sort by popularity</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row page-content content-grid">
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-17.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#1 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">$599 <sup>25</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-9.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#2 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">1250 <sup>99</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-10.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#3 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">$399 <sup>50</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-17.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#1 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">$599 <sup>25</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-9.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#2 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">1250 <sup>99</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-10.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#3 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">$399 <sup>50</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-17.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#1 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">$599 <sup>25</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-9.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#2 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">1250 <sup>99</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 content-item">
+            <div class="item-wrapper">
+              <div class="item-image">
+                <img src="img/icon-10.png" alt="">
+              </div>
+              <div class="container-fluid">
+                <h2 class="item-title">#3 Device Name</h2>
+                <div class="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item-characteristics">
+                  <span><strong>TYPE:</strong> Laptop</span>
+                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
+                  <span><strong>RAM:</strong> 1 GB</span>
+                </div>
+                <div class="item-buttons">
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="item-price">$399 <sup>50</sup></div>
+                <div class="item-actions">
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__more">
+                    More details
+                  </button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 item-actions__cart">
+                    Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row page-pagination">
+          <div class="col-md-12 page-pagination__more">
+            Load more...
+          </div>
+        </div>
+
+      </main>
+
+      <aside class="col-lg-3 order-lg-1 sidebar">
+        <div class="container-fluid sidebar-filter">
+          device type
+          <br>
+          color
+          <br>
+          ram
+        </div>
+      </aside>
 
     </div>
-
-  </main>
+  </div>
 
   <footer class="container-fluid">
 
