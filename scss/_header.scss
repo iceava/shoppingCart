@@ -2,27 +2,29 @@
   &__navbar {
     background-color: rgba($font-color-light, 0.8);
 
-    .dropdown.show {
-      border-bottom: 1px solid $font-color-light;
-      background-color: $font-color-dark;
+    @media (min-width: 992px) {
+      .dropdown.show {
+        border-bottom: 1px solid $font-color-light;
+        background-color: $font-color-dark;
 
-      .dropdown-toggle {
-        color: $font-color-light;
+        .dropdown-toggle {
+          color: $font-color-light;
+        }
       }
-    }
 
-    .dropdown-menu {
-      margin-top: 1px;
+      .dropdown-menu {
+        margin-top: 1px;
 
-      border: none;
-      border-radius: 0;
-      background-color: $font-color-dark;
+        border: none;
+        border-radius: 0;
+        background-color: $font-color-dark;
 
-      a {
-        color: $font-color-light;
+        a {
+          color: $font-color-light;
 
-        &:hover {
-          color: $font-color-dark;
+          &:hover {
+            color: $font-color-dark;
+          }
         }
       }
     }
