@@ -4,6 +4,4 @@ gulpfile.js
 .csscomb.*
 
 # IntellijIdea files
-*.iml
-.idea
-out
+.idea/
