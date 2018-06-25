@@ -8,7 +8,7 @@
 .navbar-light .navbar-nav .nav-link {
   white-space: nowrap;
 
-  color: $font-color-dark;
+  color: $color-dark;
 
   font-size: 1.2rem;
 }
@@ -25,24 +25,24 @@
       flex-grow: 1;
 
       :not(.show) {
-        border-left: 1px solid $font-color-dark;
+        border-left: 1px solid $color-dark;
       }
 
       &:last-child {
-        border-right: 1px solid $font-color-dark;
+        border-right: 1px solid $color-dark;
       }
     }
   }
 }
 
 .btn-outline-success {
-  color: $font-color-dark;
-  border-color: $font-color-dark;
+  color: $color-dark;
+  border-color: $color-dark;
   border-radius: 0;
 
   &:hover {
-    color: $font-color-light;
-    border-color: $font-color-dark;
-    background-color: $font-color-dark;
+    color: $color-light;
+    border-color: $color-dark;
+    background-color: $color-dark;
   }
 }

@@ -8,25 +8,25 @@
   font-size: 14px;
 
   a {
-    color: $font-color-light;
+    color: $color-light;
   }
 
   &-item {
     + .breadcrumb-item::before {
       content: ">";
 
-      color: $font-color-light;
+      color: $color-light;
     }
 
     &.active {
-      color: $font-color-light;
+      color: $color-light;
     }
   }
 }
 
 .page-title {
   &__header {
-    color: $font-color-light;
+    color: $color-light;
 
     font-size: 2.85rem;
   }
@@ -36,9 +36,9 @@
     margin-top: 6px;
     padding: 3px 10px 5px;
 
-    color: $font-color-light;
-    border-color: $font-color-light;
-    background-color: $font-color-dark;
+    color: $color-light;
+    border-color: $color-light;
+    background-color: $color-dark;
 
     font-size: 1.25rem;
   }
@@ -54,10 +54,10 @@
 
     margin-bottom: 30px;
 
-    border: 1px solid $font-color-light;
+    border: 1px solid $color-light;
 
     .container-fluid {
-      background-color: rgba($font-color-dark, 0.5);
+      background-color: rgba($color-dark, 0.5);
     }
   }
 
@@ -67,7 +67,7 @@
 
     height: 180px;
 
-    background-color: rgba($font-color-light, 0.75);
+    background-color: rgba($color-light, 0.75);
 
     align-items: center;
     justify-content: center;
@@ -76,13 +76,13 @@
   &-title {
     padding-top: 0.75rem;
 
-    color: $font-color-light;
+    color: $color-light;
 
     font-size: 1.75rem;
   }
 
   &-description {
-    color: $font-color-light;
+    color: $color-light;
 
     font-size: 1.25rem;
     line-height: 1.5rem;
@@ -100,7 +100,7 @@
       margin-top: 7px;
       margin-bottom: 7px;
 
-      color: $font-color-light;
+      color: $color-light;
     }
   }
 
@@ -125,7 +125,7 @@
   &-price {
     text-align: center;
 
-    color: $font-color-light;
+    color: $color-light;
 
     font-size: 2rem;
     font-weight: bold;
@@ -140,8 +140,8 @@
 
       text-transform: uppercase;
 
-      color: $font-color-light;
-      border-color: $font-color-light;
+      color: $color-light;
+      border-color: $color-light;
       border-radius: 0;
 
       font-weight: bold;
@@ -159,9 +159,9 @@
       }
 
       &:hover {
-        color: $font-color-dark;
-        border-color: $font-color-light;
-        background-color: rgba($font-color-light, 0.75);
+        color: $color-dark;
+        border-color: $color-light;
+        background-color: rgba($color-light, 0.75);
       }
 
       i {
@@ -172,7 +172,23 @@
     }
 
     &__cart {
-      background-color: rgba($font-color-light, 0.2);
+      transition: background-color 0.5s;
+
+      background-color: rgba($color-light, 0.2);
+
+      &.disabled,
+      &:disabled,
+      &.active,
+      &:active {
+        opacity: 1;
+        color: $color-light !important;
+        border-color: $color-light !important;
+        background-color: rgba($color-light, 0.1) !important;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
     }
   }
 }
@@ -186,7 +202,7 @@
     font-size: 2rem;
 
     a {
-      color: $font-color-light;
+      color: $color-light;
     }
   }
 }

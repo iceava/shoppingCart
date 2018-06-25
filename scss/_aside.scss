@@ -2,15 +2,15 @@
 .sidebar-filter {
   padding: 15px 30px 30px;
 
-  color: $font-color-light;
+  color: $color-light;
 
   @media (min-width: 992px) {
-    border-right: 1px solid $font-color-light;
-    background-color: rgba($font-color-light, 0.25);
+    border-right: 1px solid $color-light;
+    background-color: rgba($color-light, 0.25);
   }
 
   @media (max-width: 991px) {
-    border-top: 1px solid $font-color-light;
+    border-top: 1px solid $color-light;
   }
 
   legend {
@@ -36,7 +36,7 @@
 
       &:checked {
         &::before {
-          background-color: $font-color-light;
+          background-color: $color-light;
         }
       }
 
@@ -49,7 +49,7 @@
 
         content: "";
 
-        border: 1px solid $font-color-light;
+        border: 1px solid $color-light;
       }
     }
   }
@@ -59,14 +59,14 @@
 
     margin-bottom: 30px;
 
-    color: $font-color-light;
+    color: $color-light;
 
     font-size: 1.25rem;
   }
 
   &__submit {
-    border: 1px solid $font-color-light;
+    border: 1px solid $color-light;
     border-radius: 0;
-    background-color: $font-color-dark;
+    background-color: $color-dark;
   }
 }

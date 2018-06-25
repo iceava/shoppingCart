@@ -1,14 +1,14 @@
 .page-header {
   &__navbar {
-    background-color: rgba($font-color-light, 0.8);
+    background-color: rgba($color-light, 0.8);
 
     @media (min-width: 992px) {
       .dropdown.show {
-        border-bottom: 1px solid $font-color-light;
-        background-color: $font-color-dark;
+        border-bottom: 1px solid $color-light;
+        background-color: $color-dark;
 
         .dropdown-toggle {
-          color: $font-color-light;
+          color: $color-light;
         }
       }
 
@@ -17,13 +17,13 @@
 
         border: none;
         border-radius: 0;
-        background-color: $font-color-dark;
+        background-color: $color-dark;
 
         a {
-          color: $font-color-light;
+          color: $color-light;
 
           &:hover {
-            color: $font-color-dark;
+            color: $color-dark;
           }
         }
       }
@@ -34,14 +34,14 @@
     margin-right: 0;
     margin-left: 0;
 
-    border-bottom: 1px solid $font-color-light;
+    border-bottom: 1px solid $color-light;
     background-color: rgba(#000000, 0.3);
   }
 
   &__navbar-search {
     height: 50px;
 
-    border: 1px solid $font-color-dark;
+    border: 1px solid $color-dark;
 
     flex-wrap: nowrap;
 
@@ -71,13 +71,13 @@
       margin: 5px;
       padding: 0;
 
-      color: $font-color-light;
-      border-color: $font-color-dark;
-      background-color: $font-color-dark;
+      color: $color-light;
+      border-color: $color-dark;
+      background-color: $color-dark;
 
       &:hover {
-        color: $font-color-dark;
-        background-color: $font-color-light;
+        color: $color-dark;
+        background-color: $color-light;
       }
     }
 
@@ -97,10 +97,10 @@
     height: 50px;
     margin-left: 30px;
 
-    color: $font-color-dark;
+    color: $color-dark;
     border: none;
     border-radius: 0;
-    background-color: $font-color-light;
+    background-color: $color-light;
 
     @media (max-width: 991px) {
       margin-top: -12px !important;
@@ -108,8 +108,8 @@
 
     &:hover {
       span {
-        color: $font-color-dark;
-        background-color: $font-color-light;
+        color: $color-dark;
+        background-color: $color-light;
       }
     }
 
@@ -123,9 +123,9 @@
 
       transition: background-color 0.5s;
 
-      color: $font-color-light;
+      color: $color-light;
       border-radius: 12px;
-      background-color: $font-color-dark;
+      background-color: $color-dark;
       box-shadow: 0 0 5px rgba(#000000, 0.75);
     }
   }

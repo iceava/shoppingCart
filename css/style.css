@@ -256,7 +256,25 @@ body {
 }
 
 .item-actions__cart {
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.item-actions__cart.disabled,
+.item-actions__cart:disabled,
+.item-actions__cart.active,
+.item-actions__cart:active {
+  opacity: 1;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.item-actions__cart:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .page-pagination__more {
