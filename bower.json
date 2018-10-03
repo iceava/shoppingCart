@@ -1,0 +1,22 @@
+{
+  "name": "front-end-shop-template",
+  "homepage": "https://github.com/Alecto/Front-End-Shop-Template",
+  "authors": [
+    "Alecto <fomenkoandrey@inbox.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
+  }
+}
