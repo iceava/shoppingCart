@@ -1,46 +1,54 @@
 {
-  "name": "popperjs-monorepo",
-  "version": "0.0.0",
-  "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "bundlesize": "^0.15.3",
-    "jsdoc-to-markdown": "^3.0.0",
-    "lcov-result-merger": "^1.2.0",
-    "lerna": "^2.2.0",
-    "lint-staged": "^4.0.1",
-    "pre-commit": "^1.2.2",
-    "prettier-eslint-cli": "^4.1.1",
-    "wait-on": "^2.0.2",
-    "which-pm-runs-cli": "^1.0.4"
+  "name": "popper.js",
+  "version": "1.14.4",
+  "description": "A kickass library to manage your poppers",
+  "homepage": "https://popper.js.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FezVrasta/popper.js.git"
   },
-  "scripts": {
-    "postinstall": "which-pm-runs --is yarn",
-    "precommit": "lint-staged",
-    "test": "lerna run --parallel test",
-    "test:dev": "lerna run --parallel test:dev",
-    "build": "lerna run build",
-    "docs": "yarn build && for dest in popper tooltip; do jsdoc2md ./packages/$dest/dist/$dest.js > ./docs/_includes/$dest-documentation.md; done",
-    "docs:serve": "cd docs; { wait-on http://localhost:4000; open http://localhost:4000; } & jekyll serve"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write \"**/src/**/*.js\"",
-      "git add"
-    ]
-  },
-  "bundlesize": [
-    {
-      "path": "./packages/popper/dist/popper.min.js",
-      "threshold": "7.5 Kb"
-    },
-    {
-      "path": "./packages/tooltip/dist/tooltip.min.js",
-      "threshold": "2 Kb"
-    }
+  "author": "Federico Zivolo <federico.zivolo@gmail.com>",
+  "contributors": [
+    "Contributors (https://github.com/FezVrasta/popper.js/graphs/contributors)"
   ],
-  "dependencies": {},
-  "workspaces": [
-    "packages/*"
-  ]
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FezVrasta/popper.js/issues"
+  },
+  "keywords": [
+    "popperjs",
+    "component",
+    "drop",
+    "tooltip",
+    "popover",
+    "position",
+    "attached"
+  ],
+  "main": "dist/umd/popper.js",
+  "module": "dist/esm/popper.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "prepare": "yarn build",
+    "postpublish": "nuget-publish && ./bower-publish.sh",
+    "prebuild": "yarn lint",
+    "pretest": "yarn lint",
+    "build": "node bundle.js && cp index.js.flow dist/esm/poppper.js.flow",
+    "lint": "eslint .",
+    "test": "popper-karma",
+    "posttest": "tsc --project tests/types/tsconfig.json",
+    "test:dev": "BROWSERS=Chrome NODE_ENV=development yarn test",
+    "coverage": "COVERAGE=true yarn test"
+  },
+  "devDependencies": {
+    "@popperjs/bundle": "^1.0.2",
+    "@popperjs/eslint-config-popper": "^1.0.0",
+    "@popperjs/test": "^1.0.0",
+    "@popperjs/test-utils": "^1.0.0",
+    "eslint": "^4.1.1",
+    "nuget-publish": "^1.0.3",
+    "typescript": "^2.7.1"
+  },
+  "resolutions": {
+    "micromatch": "^3.0.3"
+  }
 }
