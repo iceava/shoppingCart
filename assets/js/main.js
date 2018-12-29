@@ -1,34 +1,33 @@
-let cartCounter = 0,
-    cartPrice = 0,
-    cartCounterLabel = document.querySelector('#cart-counter'),
-    buttonsContainer = document.querySelector('.page-content');
-
-let fnPriceCounter = (elem) => {
-  let tempPrice = elem.parentElement.previousElementSibling.innerHTML;
-  cartPrice += +tempPrice.replace(/^\$(\d+)\s\D+(\d+).*$/g, '$1.$2');
-  buttonsContainer.removeEventListener('click', btnClickHandler);
-  return 'Added ' + cartPrice.toFixed(2) + ' $';
-};
-
-let fnRestore = (elem, restore) => {
-  elem.innerHTML = restore;
-  buttonsContainer.addEventListener('click', btnClickHandler);
-};
+let cartCounter = 0;
+let cartPrice = 0;
+let cartCounterLabel = document.querySelector('#cart-counter');
+let buttonsContainer = document.querySelector('.page-content');
 
 let btnClickHandler = (e) => {
-  let target = e.target;
+    let target = e.target;
 
-  if (target.classList.contains('item-actions__cart')) {
+    if (target.classList.contains('item-actions__cart')) {
 
-    cartCounterLabel.innerHTML = ++cartCounter + '';
+        cartCounterLabel.innerHTML = `${++cartCounter}`;
+        if (cartCounter === 1) cartCounterLabel.style.display = 'block';
 
-    if (cartCounter === 1) cartCounterLabel.style.display = 'block';
+        let restoreHTML = target.innerHTML;
 
-    let restoreHTML = target.innerHTML;
-    target.innerHTML = fnPriceCounter(target);
+        target.innerHTML = (() => {
+            let tempPrice = target.parentElement.previousElementSibling.innerHTML;
 
-    setTimeout(fnRestore, 2000, target, restoreHTML);
-  }
+            cartPrice += +tempPrice.replace(/^\$(\d+)\s\D+(\d+).*$/gu, '$1.$2');
+
+            return `Added ${cartPrice.toFixed(2)} $`;
+        })();
+
+        buttonsContainer.removeEventListener('click', btnClickHandler);
+
+        setTimeout((elem, restore) => {
+            elem.innerHTML = restore;
+            buttonsContainer.addEventListener('click', btnClickHandler);
+        }, 2000, target, restoreHTML);
+    }
 };
 
 buttonsContainer.addEventListener('click', btnClickHandler);
