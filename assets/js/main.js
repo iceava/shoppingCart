@@ -14,9 +14,10 @@ let btnClickHandler = (e) => {
     let restoreHTML = target.innerHTML;
 
     target.innerHTML = (() => {
-      let tempPrice = target.parentElement.previousElementSibling.innerHTML;
+      const mockData = target.parentElement.previousElementSibling.innerHTML;
 
-      cartPrice += +tempPrice.replace(/^\$(\d+)\s\D+(\d+).*$/gu, '$1.$2');
+      cartPrice += Math.round(+mockData.
+        replace(/^\$(\d+)\s\D+(\d+).*$/gu, '$1.$2') * 100) / 100;
 
       return `Added ${cartPrice.toFixed(2)} $`;
     })();
