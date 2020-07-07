@@ -7,14 +7,15 @@ let btnClickHandler = (e) => {
   let target = e.target;
 
   if (target.classList.contains('item-actions__cart')) {
-    cartCounterLabel.innerHTML = ++cartCounter;
+    cartCounterLabel.innerHTML = `${++cartCounter}`;
 
     if (cartCounter === 1) cartCounterLabel.style.display = 'block';
 
-    const mockData = +target.parentElement.previousElementSibling.innerHTML.replace(
-      /^\$(\d+)\s\D+(\d+).*$/gu,
-      '$1.$2'
-    );
+    const mockData = +target.
+      parentElement.
+      previousElementSibling.
+      innerHTML.
+      replace(/^\$(\d+)\s\D+(\d+).*$/u, '$1.$2');
 
     cartPrice = Math.round((cartPrice + mockData) * 100) / 100;
 
@@ -23,10 +24,12 @@ let btnClickHandler = (e) => {
     target.innerHTML = `Added ${cartPrice.toFixed(2)} $`;
 
     buttonsContainer.removeEventListener('click', btnClickHandler);
+    target.disabled = true;
 
     setTimeout(() => {
       target.innerHTML = restoreHTML;
       buttonsContainer.addEventListener('click', btnClickHandler);
+      target.disabled = false;
     }, 2000);
   }
 };
