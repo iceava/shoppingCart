@@ -8,39 +8,28 @@ let btnClickHandler = (e) => {
 
   if (target.classList.contains('item-actions__cart')) {
 
-    const setCounterVisible = () => {
-      cartCounterLabel.innerHTML = `${++cartCounter}`;
-      if (cartCounter === 1) cartCounterLabel.style.display = 'block';
-    };
+    cartCounterLabel.innerHTML = `${++cartCounter}`;
+    if (cartCounter === 1) cartCounterLabel.style.display = 'block';
 
-    const setMockData = () => {
-      const mockData = +target.
-        parentElement.
-        previousElementSibling.
-        innerHTML.
-        replace(/^\$(\d+)\s\D+(\d+).*$/u, '$1.$2');
+    const mockData = +target.
+      parentElement.
+      previousElementSibling.
+      innerHTML.
+      replace(/^\$(\d+)\s\D+(\d+).*$/u, '$1.$2');
 
-      cartPrice = Math.round((cartPrice + mockData) * 100) / 100;
-    };
+    cartPrice = Math.round((cartPrice + mockData) * 100) / 100;
+    let restoreHTML = target.innerHTML;
 
-    const setButtonText = () => {
-      let restoreHTML = target.innerHTML;
+    target.innerHTML = `Added ${cartPrice.toFixed(2)} $`;
 
-      target.innerHTML = `Added ${cartPrice.toFixed(2)} $`;
+    buttonsContainer.removeEventListener('click', btnClickHandler);
+    target.disabled = true;
 
-      buttonsContainer.removeEventListener('click', btnClickHandler);
-      target.disabled = true;
-
-      setTimeout(() => {
-        target.innerHTML = restoreHTML;
-        buttonsContainer.addEventListener('click', btnClickHandler);
-        target.disabled = false;
-      }, 2000);
-    };
-
-    setCounterVisible();
-    setMockData();
-    setButtonText();
+    setTimeout(() => {
+      target.innerHTML = restoreHTML;
+      buttonsContainer.addEventListener('click', btnClickHandler);
+      target.disabled = false;
+    }, 2000);
   }
 };
 
